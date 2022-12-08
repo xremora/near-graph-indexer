@@ -3,15 +3,15 @@ schema:
   file: schema.graphql
 dataSources:
   - kind: near
-    name: blocks
+    name: receipts
     network: near-testnet
     source:
       account: dev-1667894688081-80006854568404
     mapping:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
-      file: blocks/blocks.wasm
+      file: receipts/receipts.wasm
       entities:
-        - BlockEvent
-      blockHandlers:
-        - handler: handleBlock
+        - Stream
+      receiptHandlers:
+        - handler: handleReceipt

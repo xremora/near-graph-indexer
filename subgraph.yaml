@@ -3,7 +3,7 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: near
-    name: blocks
+    name: receipts
     network: near-testnet
     source:
       account: "dev-1667894688081-80006854568404"
@@ -12,7 +12,6 @@ dataSources:
       language: wasm/assemblyscript
       file: ./src/mapping.ts
       entities:
-        - BlockEvent
         - Stream
-      blockHandlers:
-        - handler: handleBlock
+      receiptHandlers:
+        - handler: handleReceipt # name of the receipt handler

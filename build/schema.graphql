@@ -1,7 +1,7 @@
-type BlockEvent @entity {
+type Stream @entity {
   id: ID!
-  number: BigInt
-  hash: Bytes
-  timestampNanosec: BigInt
-  gasPrice: BigInt
+  stream_id: BigInt
+  sender: String!
+  receiver: String!
+  amount: BigInt
 }
