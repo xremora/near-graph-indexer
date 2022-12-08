@@ -1,18 +1,17 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: near
     name: blocks
     network: near-testnet
     source:
-      account: "dev-1667894688081-80006854568404"
+      account: dev-1667894688081-80006854568404
     mapping:
       apiVersion: 0.0.6
       language: wasm/assemblyscript
-      file: ./src/mapping.ts
+      file: blocks/blocks.wasm
       entities:
         - BlockEvent
-        - Stream
       blockHandlers:
         - handler: handleBlock

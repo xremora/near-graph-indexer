@@ -5,11 +5,3 @@ type BlockEvent @entity {
   timestampNanosec: BigInt
   gasPrice: BigInt
 }
-
-type Stream @entity {
-  id: ID!
-  stream_id: BigInt
-  sender: String!
-  receiver: String!
-  amount: BigInt
-}
