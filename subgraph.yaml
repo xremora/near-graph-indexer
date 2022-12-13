@@ -6,7 +6,8 @@ dataSources:
     name: receipts
     network: near-testnet
     source:
-      account: "dev-1667894688081-80006854568404"
+      account: "dev-1666544786783-45967369212094"
+      startBlock: 107939340
     mapping:
       apiVersion: 0.0.6
       language: wasm/assemblyscript

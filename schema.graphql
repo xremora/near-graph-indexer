@@ -1,7 +1,7 @@
 type Stream @entity {
   id: ID!
-  stream_id: BigInt
+  stream_id: String!
   sender: String!
   receiver: String!
-  amount: BigInt
+  amount: String!
 }

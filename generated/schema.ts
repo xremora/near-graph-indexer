@@ -42,21 +42,13 @@ export class Stream extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get stream_id(): BigInt | null {
+  get stream_id(): string {
     let value = this.get("stream_id");
-    if (!value || value.kind == ValueKind.NULL) {
-      return null;
-    } else {
-      return value.toBigInt();
-    }
+    return value!.toString();
   }
 
-  set stream_id(value: BigInt | null) {
-    if (!value) {
-      this.unset("stream_id");
-    } else {
-      this.set("stream_id", Value.fromBigInt(<BigInt>value));
-    }
+  set stream_id(value: string) {
+    this.set("stream_id", Value.fromString(value));
   }
 
   get sender(): string {
@@ -77,20 +69,12 @@ export class Stream extends Entity {
     this.set("receiver", Value.fromString(value));
   }
 
-  get amount(): BigInt | null {
+  get amount(): string {
     let value = this.get("amount");
-    if (!value || value.kind == ValueKind.NULL) {
-      return null;
-    } else {
-      return value.toBigInt();
-    }
+    return value!.toString();
   }
 
-  set amount(value: BigInt | null) {
-    if (!value) {
-      this.unset("amount");
-    } else {
-      this.set("amount", Value.fromBigInt(<BigInt>value));
-    }
+  set amount(value: string) {
+    this.set("amount", Value.fromString(value));
   }
 }
